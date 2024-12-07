@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Bar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Onest:wght@100..900&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scrolling-bar">
+    <div class="scrolling-text" id="scrollingText">
+      
+      <span>Own project-based experience</span>
+
+      <span style="color: black;font-weight: 500 "";">Seeking internships & jobs</span>
+      
+      <span>Ready to make an impact</span>
+
+      <span style="color: black;font-weight: 500">Based in Colombia</span>
+      
+      <span " >Open for remote jobs</span>
+      
+      <span style="color: black;font-weight: 500 " >Project-based experience</span>
+
+      <span ";">Seeking internships & jobs</span>
+      
+      <span style="color: black;font-weight: 500 ">Ready to make an impact</span>
+
+      <span >Based in Colombia</span>
+      
+      <span style="color: black;font-weight: 500 "" >Open for remote jobs</span>  
+    
+    </div>
+  </div>
+
+  <script>
+    
+    const duplicateText = (times) => {
+      const scrollingText = document.querySelector('#scrollingText');
+      const originalContent = scrollingText.innerHTML; 
+
+      let newContent = originalContent;
+      for (let i = 0; i < times - 1; i++) {
+        newContent += originalContent; 
+      }
+
+      scrollingText.innerHTML = newContent; 
+    }
+    duplicateText(100);
+  </script>
+</body>
+</html>
